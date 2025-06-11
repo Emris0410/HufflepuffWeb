@@ -1,4 +1,4 @@
-fetch('./json/2x73u4r9k_users.data')
+fetch('./Hufflepuffweb/json/2x73u4r9k_users.data')
   .then(response => response.json())
   .then(users => {
     document.getElementById('loginForm').addEventListener('submit', function(event) {
