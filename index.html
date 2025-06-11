@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 50px;
+      background-color: #f0f0f0;
+    }
+    form {
+      background-color: #fff;
+      padding: 20px;
+      max-width: 300px;
+      margin: auto;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+    }
+    #message {
+      color: red;
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <form id="loginForm">
+    <h2>Đăng nhập</h2>
+    <input type="text" id="username" placeholder="Tên đăng nhập" required>
+    <input type="password" id="password" placeholder="Mật khẩu" required>
+    <button type="submit">Đăng nhập</button>
+    <div id="message"></div>
+  </form>
+  <script src="login.js"></script>
+</body>
+</html>

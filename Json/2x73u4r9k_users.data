@@ -1,0 +1,12 @@
+[
+  {
+    "username": "studentA",
+    "password": "bmhtbUEzMjM=",
+    "redirect": "./A/dashboardA.html"
+  },
+  {
+    "username": "studentB",
+    "password": "bmhtbUI0NTY=",
+    "redirect": "./B/dashboardB.html"
+  }
+]

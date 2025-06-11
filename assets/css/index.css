@@ -1,0 +1,180 @@
+/* Reset margin & padding để tránh khoảng trống dư thừa */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Lora;
+  src: url(../font/Lora/Lora-Italic-VariableFont_wght.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+/* Body + Layout Container */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Lora', serif;
+  background-color: #f4f1e6;
+  color: #3b2f20;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d9b45a;
+  border-bottom: 3px solid #3b2f20;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  flex-wrap: wrap;  /* Cho responsive */
+}
+
+header .logo img {
+  height: 50px;
+}
+
+/* Year Selector Bar */
+.year-selector-bar {
+  position: relative;
+  width: 200px; /* ví dụ */
+  height: 50px;
+  background-color: #f4f1e6;
+  border: 2px solid #3b2f20;
+  border-radius: 25px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-label {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.slider-label.active {
+  opacity: 1;
+}
+
+.slider-button {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 46px;
+  height: 46px;
+  background-color: #d9b45a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: left 0.5s ease;
+  cursor: pointer;
+}
+
+.slider-icon {
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.slider-icon.active {
+  opacity: 1;
+}
+
+
+
+/* Logout Button */
+header .logout-button {
+  background-color: #3b2f20;
+  color: #f4f1e6;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+header .logout-button:hover {
+  background-color: #5a422e;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Class Cards */
+.class-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.class-card img.card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+
+.class-card {
+  background-color: #fff8dc;
+  border: 2px solid #3b2f20;
+  border-radius: 15px;
+  padding: 15px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.class-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Footer */
+footer {
+  background-color: #d9b45a;
+  color: #3b2f20;
+  text-align: center;
+  padding: 10px 0;
+  border-top: 3px solid #3b2f20;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .logo,
+  header .year-selector-bar,
+  header .logout-button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  header .year-selector-bar {
+    max-width: none;
+  }
+}

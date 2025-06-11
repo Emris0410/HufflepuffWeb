@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Phòng Chống Nghệ Thuật Hắc Ám - Lessons</title>
+  <link rel="stylesheet" href="../../../assets/css/unit.css">
+</head>
+<body>
+  <h1>Phòng Chống Nghệ Thuật Hắc Ám</h1>
+  <div id="lessons-container"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const lessons = [
+        { id: 1, name: 'Tiết 1: Giới thiệu' },
+        { id: 2, name: 'Tiết 2: Bùa Hộ Thân' },
+        { id: 3, name: 'Tiết 3: Binh pháp cơ bản' },
+        // ... thêm các bài học ở đây
+      ];
+
+      const container = document.getElementById('lessons-container');
+      lessons.forEach(lesson => {
+        const lessonDiv = document.createElement('div');
+        lessonDiv.className = 'lesson-item';
+        lessonDiv.textContent = lesson.name;
+        lessonDiv.onclick = () => window.location.href = `pcntha_lesson${lesson.id}.html`;
+        container.appendChild(lessonDiv);
+      });
+    });
+  </script>
+</body>
+</html>

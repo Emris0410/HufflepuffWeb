@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "name": "Phòng Chống Nghệ Thuật Hắc Ám",
+    "professor": "Remus Lupin",
+    "image": "images/class1.jpg",
+    "slug": "pcntha"
+  },
+  {
+    "id": "2",
+    "name": "Độc Dược",
+    "professor": "Severus Snape",
+    "image": "images/class2.jpg",
+    "slug": "docduoc"
+  },
+  {
+    "id": "3",
+    "name": "Thảo Dược Học",
+    "professor": "Pomona Sprout",
+    "image": "images/class3.jpg",
+    "slug": "thaoduoc"
+  }
+]
